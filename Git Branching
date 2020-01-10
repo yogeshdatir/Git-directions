@@ -1,0 +1,45 @@
+Creating a new branch:
+
+  Option 1:
+    
+    git branch <branch-name>
+    git branch                  // lists the names of branches in repo
+    git checkout <branch-name>
+    
+ 
+  Option 2:
+  
+    git checkout -b <branch-name>
+    
+
+Merging branches:
+
+  Checkout to the master(target) branch.
+  
+    git merge <branch-name>
+  
+  
+Deleting a branch:
+
+  1. Safely delete a branch.This prevents you from deleting the branch if it has unmerged changes.
+  
+    git branch -d <branch>
+    
+  2. Force delete branch even if there are unmerged changes.
+  
+    git branch -D <branch>
+    
+  3. This will push a delete signal to the remote origin repository that triggers a delete of the remote crazy-experiment branch.
+  
+    git push origin --delete crazy-experiment
+
+      Or
+
+    git push origin :crazy-experiment
+    
+ 
+ Rename a branch:
+ 
+  Rename the current branch to <branch>.
+
+    git branch -m <branch>
